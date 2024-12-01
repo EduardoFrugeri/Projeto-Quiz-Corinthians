@@ -67,6 +67,7 @@ div.paiimg img.brasao{
     
     text-align: center;
     margin: auto;
+    transform: translateX(-25px);
    
   
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.479));

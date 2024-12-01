@@ -1,0 +1,76 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+:root {
+   --preto:(#000500);
+   --vermelho:(#E3170A);
+   --cinza:(#707078);
+   --branco:(#F2EFEA);
+
+}
+
+body{
+    background-color:#F2EFEA;
+
+
+}
+header{
+    display: flex;
+    background:linear-gradient(black, rgba(0, 0, 0, 0.781)) ;
+    height: 150px;
+    justify-content: space-between;
+   padding: 0px 15px;
+    
+   
+    
+    
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    padding-top: 2px;
+
+    
+
+
+}
+nav{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    
+    height: 78px;
+    align-items: center;
+}
+nav a{
+    cursor: auto;
+}
+
+nav a img{
+    width: 36px;
+    border-radius: 50%;
+  margin: 4px;
+    cursor: pointer;
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.349);
+    transition: 0.4s ease;
+  
+}
+
+nav a img:hover{
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.349);
+    transform: translateY(-1px);
+    transition: 0.4s ease;
+    
+}
+
+div.paiimg img.brasao{
+    width: 110px;
+    
+    text-align: center;
+    
+    /*transform: translate(25px, 5px);*/
+    filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.479));
+    
+    
+}

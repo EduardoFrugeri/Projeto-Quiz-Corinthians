@@ -9,6 +9,7 @@ div.pai1{
     
     display: flex;
     width: 65px;
+    margin-top: 20px;
     justify-content: center;
     align-items: center;
     transform: rotate(90deg);
@@ -24,7 +25,7 @@ div.pai1{
    
     background-color: white;
     width: 150px;
-    height: 21px;
+    height: 22px;
     border-radius: 500px;
     padding: 4px;
     cursor: pointer;

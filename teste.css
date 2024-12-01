@@ -20,7 +20,7 @@ body{
 header{
     display: flex;
     background:linear-gradient(black, rgba(0, 0, 0, 0.781)) ;
-    height: 150px;
+    
     justify-content: space-between;
    padding: 0px 15px;
     
@@ -39,16 +39,15 @@ nav{
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    
-    height: 78px;
     align-items: center;
+    flex-wrap: wrap;
 }
 nav a{
     cursor: auto;
 }
 
 nav a img{
-    width: 36px;
+    width: 7vw;
     border-radius: 50%;
   margin: 4px;
     cursor: pointer;

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+div.pai{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#fora{
+    
+   
+    background-color: white;
+    width: 130px;
+    height: 50px;
+    border-radius: 500px;
+    padding: 4px;
+    cursor: pointer;
+    transition: background 0.5s ease;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.527);*/
+        
+}
+#fora.ativo{
+   
+    background-color: rgba(0, 0, 0, 0.74);
+    transition: transform 1s ease;
+    transition: background 0.5s ease;
+             
+}
+
+#dentro{
+   
+
+    background-color: rgba(143, 143, 143, 0.199);
+    
+    box-shadow: 0px 0px 4px rgba(85, 85, 85, 0.315);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+    transform: translateX(0px);
+    transition: transform 0.5s ease;
+    display: inline-block;
+    
+}
+
+#dentro.ativo{
+    background-color: rgba(255, 255, 255, 0.247);
+    transform: translateX(80px);
+    transition: transform 0.5s ease;
+    
+}

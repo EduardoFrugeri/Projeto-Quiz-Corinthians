@@ -64,7 +64,10 @@ nav a img:hover{
 }
 
 div.paiimg img.brasao{
-    width: 110px;
+    width: 17vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1vw;
     
     text-align: center;
     

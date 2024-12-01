@@ -8,9 +8,10 @@
 div.pai1{
     
     display: flex;
-    width: 20%;
+    width: 65px;
     justify-content: center;
     align-items: center;
+    transform: rotate(90deg);
    
 
 
@@ -22,8 +23,8 @@ div.pai1{
     
    
     background-color: white;
-    width: 50px;
-    height: 17px;
+    width: 150px;
+    height: 21px;
     border-radius: 500px;
     padding: 4px;
     cursor: pointer;
@@ -37,8 +38,8 @@ div.pai1{
    
     background-color: rgba(0, 0, 0, 0.74);
     box-shadow: inset 0px 0px 8px rgba(255, 255, 255, 0.37);
-    height: 18px;
-    width: 51px;
+    height: 22px;
+    width: 150px;
     
 
     transition: transform 1s ease;
@@ -49,14 +50,14 @@ div.pai1{
 #dentro{
    
 
-    background-color: rgba(143, 143, 143, 0.384);
+    background-color: rgba(143, 143, 143, 0.5);
     
     box-shadow: 0px 0px 4px rgba(85, 85, 85, 0.315);
-    width: 23px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     
-    transform: translate(-3px, -3px);
+    transform: translate(-2px, -1px);
     transition: transform 0.5s ease;
     
     
@@ -64,7 +65,7 @@ div.pai1{
 
 #dentro.ativo{
     background-color: rgba(255, 255, 255, 0.336);
-    transform: translate(30px, -2px);
+    transform: translate(35px, -1px);
     transition: transform 0.5s ease;
     
 }

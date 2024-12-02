@@ -7,6 +7,7 @@
     margin: 0px;
     font-family: "Poppins", sans-serif;
     font-weight: 300;
+    
 }
 :root {
    --preto:(#000500);
@@ -18,6 +19,7 @@
 
 body{
     background-color:#F2EFEA;
+    
     
 
 
@@ -89,7 +91,7 @@ div.paiimg img.brasao{
 }
 
 main{
-    transform: translateY(60px);
+    transform: translateY(40px);
     width: 100%;
     
     
@@ -101,15 +103,141 @@ section{
     width: 80vw;
     
     margin: auto;
+    margin-bottom: 10px;
 }
+
+.pontos{
+    background-color: #cfcfcf34;
+    border: 2px solid rgba(0, 0, 0, 0.486);
+    box-shadow: 0px 4px 4px #00000028;
+    width: 170px;
+    height: 120px;
+    margin: auto;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    padding: 10px;
+    padding-top: 5px;
+    text-align: center;
+    transition: 0.6s ease;
+}
+
+.pontos:hover{
+    transform: translateY(-2px);
+    transition: 0.5s ease;
+}
+
+
+
+div.pontos h2{
+    font-weight: 400;
+}
+
+div.pontos h2#pontonumero{
+    margin-top: 8px;
+    font-size: 2.7em;
+    text-shadow:1px 1px 3px #bb131342;
+}
+
+
 
 h2#nivel{
     text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
+    
+    
 }
-h2.bola{
+.bola#verde{
     text-transform: uppercase;
-   
-    display: block;
+    margin-left: 10px;
+    
+    background-color: green;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
 }
+
+.bola#vermelho{
+    text-transform: uppercase;
+    margin-left: 10px;
+    
+    background-color: rgb(212, 0, 0);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.bola#laranja{
+    text-transform: uppercase;
+    margin-left: 10px;
+    
+    background-color: rgb(255, 208, 52);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+
+
+
+div.respostas{
+    background-color: rgba(241, 241, 241, 0.884);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+    border-bottom-left-radius: 85px;
+    border-top-left-radius: 85px;
+    padding: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.445);
+    margin: 30px;
+    padding-left: 0px;
+    width: 355px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    user-select: none;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.445);
+}
+
+
+
+div.respostas:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgba(68, 68, 68, 0.822);
+    transition: 0.2s ease;
+    transform: translate(-1px, -2px);
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.445);
+}
+
+span{
+    background-color: rgba(0, 0, 0, 0.774);
+    padding: 6px 11px;
+    border: 0.7px solid rgb(0, 0, 0);
+    border-radius: 70px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: white;
+    margin-right:10px ;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.438);
+    transition: 0.2s ease;
+    user-select: none;
+}
+
+span:hover{
+    background-color: white;
+    color: black;
+    box-shadow:inset 0px 0px 20px rgba(0, 0, 0, 0.514);
+}
+
+div.container-res{
+    margin-bottom: 20px;
+    padding-bottom: 30px;
+}
+
+
+
+
 
 

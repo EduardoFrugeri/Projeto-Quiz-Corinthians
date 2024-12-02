@@ -35,10 +35,27 @@
         
     </header>
     <main>
+        <div class="pontos"><h2>Pontos</h2>
+        <h2 id="pontonumero">0</h2></div>
         <section>
-            <h2 id="nivel">Nivel: <div class="bola" id="verde"></div></h2>
+            <div class="label" >
+                <h2 id="nivel">Nivel : <div class="bola" id="verde"></div></h2>
+            </div>
             <h2>1 - Qual é o ano de fundação do Corinthians?</h2>
             
+            <div class="container-res" onmouseover="mudarbg()" onmouseout="desmudarbg()">
+
+        <div class="respostas" id="errado1" onclick="perdeu1()"> <span class="Letra" id="errado1">A</span> 1908</div>   
+
+    
+        <div class="respostas" id="certo" onclick="aumentarponto1()" > <span class="Letra" id="certo1">B</span> 1910</div>
+
+    
+        <div class="respostas" id="errado2" onclick="perdeu2()"> <span class="Letra" id="errado2">C</span> 1912</div>    
+
+        <div class="respostas" id="errado3" onclick="perdeu3()"> <span class="Letra" id="errado3">D</span> 1914</div>  
+        
+    </div>
         </section>
         
     </main>

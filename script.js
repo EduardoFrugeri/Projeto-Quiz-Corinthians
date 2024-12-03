@@ -1,5 +1,26 @@
+
+    const respostaErrada1 = document.getElementById('errado1');
+    const respostaErrada2 = document.getElementById('errado2');
+    const respostaErrada3 = document.getElementById('errado3');
+    const respostaCerta = document.getElementById('certo');
+    
+    //span
+    const spanErrado1 = document.getElementById('errado1span');
+    const spanErrado2 = document.getElementById('errado2span');
+    const letraErrado3 = document.getElementById('errado3span');
+    const spanCerto = document.getElementById('certo1');
+
+    //resposta
+    const respostas = document.querySelector('div.respostas')
+    
+    
+    
+    
+    
+    
     var pontos = 0
 function aumentarponto1(){
+    document.getElementById('certo').style.transform = 'translate(0px, 0px)'
     
     if (pontos < 1){
     pontos += 1
@@ -14,55 +35,75 @@ function aumentarponto1(){
     document.getElementById('errado2').style.backgroundColor = '#ff2f2f'
     document.getElementById('errado3').style.backgroundColor = '#ff2f2f'
 
-    localStorage.setItem('pontos', pontos);
     
 }
 
-document.addEventListener('keydown', function (e) {
-    if ((e.key === 'F5') || (e.ctrlKey && e.key === 'r')) {
-        e.preventDefault();  // Impede a ação padrão de recarregar
-        redirecionarParaIndex(); // Chama a função de redirecionamento
-    }
-});
+document.querySelector('div.respostas').addEventListener('click', function mouseclick2(){
+    const todas = document.querySelectorAll('#errado1, #errado2, #errado3, #certo')
+    const todasspan = document.querySelectorAll('#errado1span, #errado2span, #errado3span, #certo1')
 
-// Impede a atualização da página por F5, Ctrl+R, e clicando no botão de recarregar
-document.addEventListener('keydown', function (e) {
-    if ((e.key === 'F5') || (e.ctrlKey && e.key === 'r')) {
-        e.preventDefault();  // Impede a ação padrão de recarregar
-        redirecionarParaIndex(); // Chama a função de redirecionamento
-    }
-});
+    todas.forEach(todasres => {
 
-// Impede o clique direito para acessar o menu de recarregamento
-window.addEventListener('contextmenu', function (e) {
-    e.preventDefault();  // Impede o menu de contexto (botão direito do mouse)
-});
+        todasres.classList.add('RESsemhove')
+        todasres.classList.remove('respostas')
 
-// Exibe uma confirmação quando o usuário tenta sair da página
-window.addEventListener('beforeunload', function (e) {
-    // Para a maioria dos navegadores modernos, você precisa definir o returnValue
-    e.returnValue = '';  // Mensagem de confirmação (não será exibida na maioria dos navegadores)
-});
+    })
+    todasspan.forEach(todasspan1 => {
+        todasspan1.classList.add('spansemhover')
+        todasspan1.classList.remove('Letra')
+    })
+})
 
-// Função para redirecionar o usuário para o index.html
-function redirecionarParaIndex() {
-    const confirmation = window.confirm('Você tem certeza que deseja recarregar a página e voltar para o início?');
-    
-    if (confirmation) {
-        // Se clicar "Sim", redireciona para index.html
-        window.location.href = 'index.html';
-    }
-}
+/*se clicar class errado{
+    muda class id errado
+} */
 
-function perdeu1(){
+    document.querySelectorAll('.errado').forEach(errados => {
+
+        errados.addEventListener('click', function (event){
+            const respostaErrada1 = document.getElementById('errado1');
+            const respostaErrada2 = document.getElementById('errado2');
+            const respostaErrada3 = document.getElementById('errado3');
+            const respostaCerta = document.getElementById('certo');
+            respostaCerta.classList.add('certo-ativo')
+            
+            if (event.target.id === 'errado1'){
+                respostaErrada1.classList.add('errado-ativo')
+            
+                } else if(event.target.id=='errado2'){
+                    respostaErrada2.classList.add('errado-ativo')
+
+                }else {
+                    respostaErrada3.classList.add('errado-ativo')
+
+                }
+
+
+
+        })
+    })
+
+
+
+
+
+
+
+/*function perdeu1(){
+
+    document.getElementById('errado1').style.transform = 'translate(0px, 0px)'
+
     document.getElementById('errado1').style.backgroundColor = '#ff2f2f'
     document.querySelector('#certo').style.backgroundColor = '#7dff4a71'
     document.querySelector('#certo1').style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
     document.getElementById('errado1span').style.backgroundColor = '#858585110'
+
     
 
 }
 function perdeu2(){
+    document.getElementById('errado2').style.transform = 'translate(0px, 0px)'
+    document.querySelector('.respostas').style.transform = 'translate(0px, 0px)';
     document.getElementById('errado2').style.backgroundColor = '#ff2f2f'
     document.querySelector('#certo').style.backgroundColor = '#7dff4a71'
     document.querySelector('#certo1').style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
@@ -71,64 +112,123 @@ function perdeu2(){
 
 }
 function perdeu3(){
+    respostaErrada3.style.color = 'black';
+    respostaErrada3.style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.445)'
+    respostaErrada3.style.transform = 'translate(0px, 0px)'
+    respostaErrada3.style.backgroundColor = '#ff2f2f'
+    respostaErrada3.style.cursor = 'auto';
 
+    respostas.style.transform = 'translate(0px, 0px)';
     
-    document.getElementById('errado3').style.backgroundColor = '#ff2f2f'
-    document.querySelector('#certo').style.backgroundColor = '#7dff4a71'
+    respostaCerta.style.backgroundColor = '#7dff4a71'
     document.querySelector('#certo1').style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
     document.getElementById('errado3span').style.backgroundColor = '#858585110'
 
-    const mouseclick = document.getElementById('errado1')
-    mouseclick.addEventListener('click', function(){
-    document.getElementById('errado1span').style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
-    document.getElementById('errado1').style.backgroundColor = 'white'
 
+    function mouseclick(){
+    const mouseclicks = document.querySelectorAll('#errado1, #errado2')
 
-    })
-
-    const mouseover1 = document.getElementById('errado1')
-    const span1 = document.getElementById('errado1span')
-   
-
-
-    mouseover1.addEventListener('mouseover', function(){
-        mouseover1.style.transform = 'translate(0px, 0px)'
-        mouseover1.style.backgroundColor = 'white'
-        mouseover1.style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.445)'
-        mouseover1.style.color = 'black'
-        mouseover1.style.cursor = 'auto'
-
-        span1.style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
-        span1.style.color = 'white'
-        span1.style.boxShadow = 'none'
-    })
-
-    mouseover1('errado1', 'errado1span')
-    mouseover1('errado2', 'errado2span')
-    mouseover1('errado3', 'errado3span')
-
-    const mouseover5 = document.getElementById('certo')
-    mouseover5.addEventListener('mouseover', function(){
-
-        document.getElementById('certo').style.transform = 'translate(0px, 0px)'
-        
-        document.getElementById('certo').style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.445)'
-        document.getElementById('certo').style.color = 'black'
-        document.getElementById('certo').style.cursor = 'auto'
-
-        document.getElementById('certo1').style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
-        document.getElementById('certo1').style.color = 'white'
-        document.getElementById('certo1').style.boxShadow = 'none'
-
-
-
-    })
+    mouseclicks.forEach(span1 => {
+    span1.addEventListener('click', function(){
 
     
+
+    span1.style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
+    span1.style.backgroundColor = 'rgba(241, 241, 241, 0.884)'
+
+
+})
+    
+})
+}
+
+mouseclick()
+
+function mouseover1(){
+    const elementos = [respostaErrada1, respostaErrada2]
+    const elemento3 = document.querySelector('.errado3')
+    
+    
+    elementos.forEach(elemento1 => {
+        
+        elemento1.addEventListener('mouseover', function(){
+            elemento1.style.transform = 'translate(0px, 0px)';
+            elemento1.style.backgroundColor = 'rgba(241, 241, 241, 0.884)';
+            elemento1.style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.445)';
+            elemento1.style.color = 'black';
+            elemento1.style.cursor = 'auto';
+            elemento3.style.transform = 'translate(0px, 0px)'
+            elemento3.style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.445)'
+            elemento3.style.color = 'black';
+            
+        })
+        
+    })
+}
+mouseover1();
+
+
+
+
+const mouseover5 = document.getElementById('certo')
+mouseover5.addEventListener('mouseover', function(){
+    
+document.getElementById('certo').style.transform = 'translate(0px, 0px)'
+
+    document.getElementById('certo').style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.445)'
+    document.getElementById('certo').style.color = 'black'
+    document.getElementById('certo').style.cursor = 'auto'
+    
+    document.getElementById('certo1').style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
+    document.getElementById('certo1').style.color = 'white'
+    document.getElementById('certo1').style.boxShadow = 'none'
+    
+    
+    
+})
+
+
 
 
 
 }
+
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*span1.style.backgroundColor = 'rgba(0, 0, 0, 0.774)';
+span1.style.color = 'white';
+span1.style.boxShadow = 'none'; */
+
+
+
+
+
+
+
+
+
 
 
 //Botão

@@ -7,7 +7,7 @@
     //span
     const spanErrado1 = document.getElementById('errado1span');
     const spanErrado2 = document.getElementById('errado2span');
-    const letraErrado3 = document.getElementById('errado3span');
+    const spanErrado3 = document.getElementById('errado3span');
     const spanCerto = document.getElementById('certo1');
 
     //resposta
@@ -58,30 +58,21 @@ document.querySelector('div.respostas').addEventListener('click', function mouse
     muda class id errado
 } */
 
-    document.querySelectorAll('.errado').forEach(errados => {
-
-        errados.addEventListener('click', function (event){
-            const respostaErrada1 = document.getElementById('errado1');
-            const respostaErrada2 = document.getElementById('errado2');
-            const respostaErrada3 = document.getElementById('errado3');
-            const respostaCerta = document.getElementById('certo');
-            respostaCerta.classList.add('certo-ativo')
-            
-            if (event.target.id === 'errado1'){
-                respostaErrada1.classList.add('errado-ativo')
-            
-                } else if(event.target.id=='errado2'){
-                    respostaErrada2.classList.add('errado-ativo')
-
-                }else {
-                    respostaErrada3.classList.add('errado-ativo')
-
-                }
-
-
-
-        })
-    })
+  /*  document.querySelectorAll('.errado').forEach(errados => {
+        function handleClick() {
+            // Ativa a classe no elemento com ID "certo"
+            document.getElementById('certo').classList.add('certo-ativo');
+    
+            // Remove o evento de clique de todos os elementos para fixar o estado
+            document.querySelectorAll('.errado').forEach(el => el.removeEventListener('click', handleClick));
+    
+            // Adiciona a classe "errado-ativo" ao botão clicado
+            this.classList.add('errado-ativo');
+        }
+    
+        // Adiciona o evento de clique a cada botão
+        errados.addEventListener('click', handleClick);
+    }); */
 
 
 
@@ -89,7 +80,7 @@ document.querySelector('div.respostas').addEventListener('click', function mouse
 
 
 
-/*function perdeu1(){
+function perdeu1(){
 
     document.getElementById('errado1').style.transform = 'translate(0px, 0px)'
 
@@ -122,7 +113,7 @@ function perdeu3(){
     
     respostaCerta.style.backgroundColor = '#7dff4a71'
     document.querySelector('#certo1').style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
-    document.getElementById('errado3span').style.backgroundColor = '#858585110'
+    spanErrado3.style.backgroundColor = '#858585110'
 
 
     function mouseclick(){
@@ -168,22 +159,47 @@ function mouseover1(){
 mouseover1();
 
 
+function mousespan(){
 
 
-const mouseover5 = document.getElementById('certo')
-mouseover5.addEventListener('mouseover', function(){
+    const elementosspan = [spanErrado1, spanErrado2]
+    const elemento3span = document.getElementById('errado3span')
     
-document.getElementById('certo').style.transform = 'translate(0px, 0px)'
+    
+    elementosspan.forEach(elemento2span => {
+        
+        elemento2span.addEventListener('mouseover', function(){
+            elemento2span.classList.add('spansemhover')
+            elemento2span.classList.remove('Letra')
 
-    document.getElementById('certo').style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.445)'
-    document.getElementById('certo').style.color = 'black'
-    document.getElementById('certo').style.cursor = 'auto'
+            
+
+            
+        })
+        elemento3span.classList.add('spansemhover')
+        elemento3span.classList.remove('Letra')
     
-    document.getElementById('certo1').style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
-    document.getElementById('certo1').style.color = 'white'
-    document.getElementById('certo1').style.boxShadow = 'none'
+    })
+}
+mousespan();
+
+
+
+
+
+
+const mouseovercerto = document.getElementById('certo')
+mouseovercerto.addEventListener('mouseover', function(){
     
+    respostaCerta.style.transform = 'translate(0px, 0px)'
+
+    respostaCerta.style.boxShadow = '1px 1px 3px rgba(0, 0, 0, 0.445)'
+    respostaCerta.style.color = 'black'
+    respostaCerta.style.cursor = 'auto'
     
+    spanCerto.style.backgroundColor = 'rgba(0, 0, 0, 0.774)'
+    spanCerto.style.color = 'white'
+    spanCerto.style.boxShadow = 'none'
     
 })
 
@@ -194,7 +210,7 @@ document.getElementById('certo').style.transform = 'translate(0px, 0px)'
 }
 
 
-*/
+
 
 
 

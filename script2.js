@@ -19,7 +19,7 @@ const respostaErrada1 = document.getElementById('errado1');
     
     var pontos = 0
 
-    respostaCerta.addEventListener('click', function aumentarponto1(){
+    function aumentarponto(){
 
         respostaCerta.classList.add('certoativo')
         respostaCerta.classList.remove('respostas')
@@ -33,56 +33,60 @@ const respostaErrada1 = document.getElementById('errado1');
         pontos = 1
     }
 
-   /* document.getElementById('certo').style.backgroundColor = '#7dff4a71'
+    /* document.getElementById('certo').style.backgroundColor = '#7dff4a71'
     document.querySelector('#certo1').style.backgroundColor = 'rgba(0, 0, 0, 0.774)' */
-
+    
     
     respostaErrada1.classList.remove('respostas')
     respostaErrada2.classList.remove('respostas')
     respostaErrada3.classList.remove('respostas')
- 
-
+    
+    
     respostaErrada1.classList.add('erradoativo')
     respostaErrada2.classList.add('erradoativo')
     respostaErrada3.classList.add('erradoativo')
-
+    
     spanErrado1.classList.add('spansemhover')
     spanErrado2.classList.add('spansemhover')
     spanErrado3.classList.add('spansemhover')
     spanCerto.classList.add('spansemhover')
-
+    
     spanErrado1.classList.remove('Letra')
     spanErrado2.classList.remove('Letra')
     spanErrado3.classList.remove('Letra')
     spanCerto.classList.remove('Letra')
+    aumentarponto()
+}
 
-})
+function errados23(){
+    respostaErrada2.classList.add('RESsemhove')
+    respostaErrada3.classList.add('RESsemhove')
+    
+}
+
+
+
+function clicoucerto(){
+    
+    respostaErrada2.addEventListener('click', clicoucerto);
+    respostaErrada3.addEventListener('click', clicoucerto);
+    respostaErrada2.classList.remove('erradoativo')
+    respostaErrada3.classList.remove('erradoativo')
+
+    errados23()
+
+}
 
 respostaErrada1.addEventListener('click', function perdeu1()
 {
-
-    respostaCerta.addEventListener('click', function clickcerto(){
-        respostaCerta.classList.remove('certoativo')
-        respostaCerta.classList.add('certoativo')
-
-        
-        respostaErrada2.classList.remove('erradoativo')
-        respostaErrada3.classList.remove('erradoativo')
     
-        respostaErrada2.classList.add('RESsemhove')
-        respostaErrada3.classList.add('RESsemhove')
-
-        if (pontos = 1){
-            pontos -= 1
-            document.getElementById('pontonumero').innerHTML = pontos
-            }else {
-                pontos = 0
-            }
-
-
-        
-    })
-
+    respostaCerta.addEventListener('click', clicoucerto);
+    respostaCerta.removeEventListener('click', aumentarponto);
+    
+    
+    
+    
+    
     respostaErrada1.classList.remove('respostas')
     respostaErrada2.classList.remove('respostas')
     respostaErrada3.classList.remove('respostas')
@@ -100,20 +104,21 @@ respostaErrada1.addEventListener('click', function perdeu1()
     spanErrado3.classList.add('spansemhover')
     spanCerto.classList.add('spansemhover')
     
-
+    
     spanErrado1.classList.remove('Letra')
     spanErrado2.classList.remove('Letra')
     spanErrado3.classList.remove('Letra')
     spanCerto.classList.remove('Letra')
-
-
-
+    
+    
+    
+    
 })
 
 respostaErrada2.addEventListener('click', function perdeu2()
 {
-
-
+    
+    
     respostaErrada1.addEventListener('click', function clickerrado1(){
 
         respostaErrada1.classList.add('RESsemhove')
